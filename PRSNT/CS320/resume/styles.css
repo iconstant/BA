@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -29,6 +28,7 @@ div {
 
 h1 {
     color: #00008b;
+    font-variant: small-caps;
 }
 
 
@@ -41,11 +41,11 @@ h3 {
 }
 
 p {
-    margin: auto;
+    margin: 5px;
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: circle;
     padding: 0px;
 }
 
