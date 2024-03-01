@@ -4,7 +4,6 @@ body {
     margin: 0px;
     padding: 10px;
     margin: 20px;
-    
 }
 
 html {
@@ -18,11 +17,14 @@ header {
 div {
     margin-bottom: auto;
 }
+.bottom {
+    padding-bottom: 5px;
+}
 
 .edge {
-    margin-bottom: auto;
+   margin-bottom: auto;
     float: left;
-    width: 540px;
+    width: auto;
 }
 
 h1 {
@@ -34,17 +36,21 @@ h2 {
     color: #00008b;
 }
 
+h3 {
+    text-align: center;
+}
+
 p {
     margin: auto;
 }
 
 ul {
     list-style-type: none;
-    padding: 8px;
+    padding: 0px;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 hr.blue {
@@ -83,7 +89,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: whitesmoke;
+    background-color: olive;
 }
 /*drop down style*/
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right*/
@@ -132,29 +138,18 @@ a:hover, a:active {
     background-color: #3e8e41;
 }
 
-/*bio sketch img gallery*/
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-}
+/*biosketch list*/
+.itemH {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-style: bold;
+  }
 
-    div.gallery:hover {
-        border: 1px solid #777;
-    }
+  .itemV {
+    font-family: 'Times New Roman', serif;
+  }
 
-    div.gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-/*projects table*/
+/*projects /biosketch table*/
 table {
     border-collapse: collapse;
     width: 100%;
