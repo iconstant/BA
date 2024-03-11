@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="tic-tac-toe-container">
+        <!--board-->
+        <svg id="tic-tac-toe" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Vertical lines -->
+            <line x1="100" y1="0" x2="100" y2="300" stroke="black" stroke-width="3" />
+            <line x1="200" y1="0" x2="200" y2="300" stroke="black" stroke-width="3" />
+
+            <!-- Horizontal lines -->
+            <line x1="0" y1="100" x2="300" y2="100" stroke="black" stroke-width="3" />
+            <line x1="0" y1="200" x2="300" y2="200" stroke="black" stroke-width="3" />
+
+        </svg>
+
+        <!-- X's and O's -->
+        <svg id="xs&os" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Example X -->
+            <line id="X0" x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="5" />
+            <line id="X1" x1="90" y1="10" x2="10" y2="90" stroke="red" stroke-width="5" />
+
+            <!-- Example O -->
+            <circle id="O0" cx="250" cy="250" r="40" stroke="blue" stroke-width="5" fill="none" />
+            <circle id="O1" cx="0" cy="0" r="0" stroke="blue" stroke-width="0" fill="none" />
+            Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <input type="button" value="Change X" onclick="changeMe()" />
+        <input type="button" value="Add O" onclick="addMe()" />
+
+        <script src="anim.js"></script>
+</body>
+
+</html>
