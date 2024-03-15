@@ -7,7 +7,7 @@ client = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = client["Assgn3"]
 mycol = mydb["LoginID"]
 
-id = []
+id = [] #table array
 
 tbl = "<tr> <td>Login_ID</td> <td>Password</td> <td>First_name</td> <td>Last_name</td> <td>Email</td> <td>Balance</td> </tr>"
 id.append(tbl)
@@ -43,7 +43,7 @@ for y in mycol.find():
     </html>
     '''%(id)
     
-filename = 'display.html'
+filename = 'query.html'
 
 def main(contents, filename):
     output = open(filename,"w")

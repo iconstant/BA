@@ -1,47 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!doctype html>
 <html>
 
 <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <link rel="stylesheet" href="styles.css">
-    <title>Python Webbrowser</title>
+    <title>Gamez Central</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <table id="logins">
-        <tr>
-            <td>Login_ID</td>
-            <td>Password</td>
-            <td>First_name</td>
-            <td>Last_name</td>
-            <td>Email</td>
-            <td>Balance</td>
-        </tr>
-        <tr>
-            <td>jmiller</td>
-            <td>1psswd!</td>
-            <td>john</td>
-            <td>miller</td>
-            <td>jmiller@gmail.com</td>
-            <td>$100.00</td>
-        </tr>
-        <tr>
-            <td>iconst</td>
-            <td>32wdp1</td>
-            <td>ines</td>
-            <td>constant</td>
-            <td>iconstant@gmail.com</td>
-            <td>$250.00</td>
-        </tr>
-        <tr>
-            <td>csmith</td>
-            <td>passwd123</td>
-            <td>cole</td>
-            <td>smith</td>
-            <td>csmith@yahoo.com</td>
-            <td>$500.00</td>
-        </tr>
-    </table>
+    <div class="ui top fixed menu">
+        <div class="item dropdown" style="margin: 0px; padding: 5px 0px 0px 5px">
+            <a class="dropbtn" href="index.html"><img src="html/Media/logo.png" width="50px"></a>
+            <div class="dropdown-content">
+                <a href="html/login.html">Login</a>
+                <a href="html/signup.html">Sign Up</a>
+            </div>
+        </div>
+        <!-- link to html file ex. href="./Risk.html"-->
+        <a class="item page" href="html/risk.html">Risk</a>
+        <a class="item page" href="html/chess.html">Chess</a>
+        <a class="item page" href="html/tictactoe.html">Tic-Tac-Toe</a>
+        <a class="item page" href="html/leaderboard.html">Leaderboard</a>
+        <a class="item page" href="html/credits.html">Credits</a>
+        <img class="ui avatar image login" src="html/Media/logo.png">
+    </div>
+    
+    <h1>Gamez Central</h1>
+    
+    <div>
+        
+        <table id="logins">
+            <tr>
+                <td>Login_ID</td>
+                <td>Password</td>
+                <td>First_name</td>
+                <td>Last_name</td>
+                <td>Email</td>
+                <td>Balance</td>
+            </tr>
+            <tr>
+                <td>jmiller</td>
+                <td>1psswd!</td>
+                <td>john</td>
+                <td>miller</td>
+                <td>jmiller@gmail.com</td>
+                <td>$100.00</td>
+            </tr>
+            <tr>
+                <td>iconst</td>
+                <td>32wdp1</td>
+                <td>ines</td>
+                <td>constant</td>
+                <td>iconstant@gmail.com</td>
+                <td>$250.00</td>
+            </tr>
+            <tr>
+                <td>csmith</td>
+                <td>passwd123</td>
+                <td>cole</td>
+                <td>smith</td>
+                <td>csmith@yahoo.com</td>
+                <td>$500.00</td>
+            </tr>
+        </table>
+    </div>
+
+    <form action="query.py" method="post">
+        <input type="text" name="user_input" placeholder="Enter your text here">
+        <button type="submit">Execute</button>
+    </form>
+
+    <div id="result"></div>
+
 </body>
+
+<footer>
+    <div class="ui inverted bottom fixed menu">
+        <div class="item">
+            <p>2024 © Copyright Gamez Central. All rights Reserved.</p>
+        </div>
+        <div class="item">
+            <p>CSS provided by Fomantic-UI</p>
+        </div>
+    </div>
+</footer>
 
 </html>
