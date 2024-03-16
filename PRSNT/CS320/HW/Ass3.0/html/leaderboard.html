@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamez Central - Leaderboard</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="GC.css">
+</head>
+
+<body>
+
+    <div class="ui top fixed menu">
+		<div class="item" style="margin: 0px; padding: 5px 0px 0px 5px" >
+			<a href="../index.html" ><img src="./Media/logo.png" width="50px"></a >
+		</div>
+		<a class="item page" href="./Risk.html">Risk</a>
+		<a class="item page" href="./Chess.html">Chess</a>
+		<a class="item page" href="./tictactoe.html">Tic-Tac-Toe</a>
+		<a class="item page" href="./leaderboard.html">Leaderboard</a>
+		<a class="item page" href="./credits.html">Credits</a>
+		<div class="right item dropdown" style="margin: 0px; padding: 5px 0px 0px 5px" >
+			<img src="./Media/account.png" width="50px">
+			<div class="dropdown-content">
+				<a href="./login.html">Login</a>
+				<a href="./signup.html">Sign Up</a>
+			</div>
+		</div>
+	</div>
+
+    <h1>Gamez Central - Leaderboard</h1>
+
+    <div class="ui horizontal equal width segments" style="width: 90%; text-align: center; margin: auto">
+        <div class="ui segment">
+            <table id="leaderboard-table" class="ui celled table">
+                <thead>
+                  <tr>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Fetch leaderboard data and update the table
+        async function fetchLeaderboardData() {
+            const response = await fetch('/leaderboard-data');
+            const data = await response.json();
+    
+            // Update the table with the fetched data
+            const tbody = document.querySelector('#leaderboard-table tbody');
+            tbody.innerHTML = ''; // Clear existing rows
+    
+            data.forEach((user) => {
+                const row = `<tr>
+                                <td>${user.user_name}</td>
+                                <td>${user.email}</td>
+                                <td>${user.balance}</td>
+                            </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
+    
+        // Call the function to fetch and update data when the page loads
+        window.onload = fetchLeaderboardData;
+    </script>
+
+</body>
+
+<footer>
+    <div class="ui inverted bottom fixed menu">
+        <div class="item">
+            <p>2024 © Copyright Gamez Central. All rights Reserved.</p>
+        </div>
+        <div class="item">
+            <p>CSS provided by Fomantic-UI</p>
+        </div>
+    </div>
+</footer>
+
+</html>
