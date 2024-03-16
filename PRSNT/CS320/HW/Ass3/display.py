@@ -43,7 +43,7 @@ for y in mycol.find():
     </html>
     '''%(id)
     
-filename = 'query.html'
+filename = 'display.html'
 
 def main(contents, filename):
     output = open(filename,"w")

@@ -1,9 +1,17 @@
 import pymongo
-import webbrowser
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = client["Assgn3"]
 mycol = mydb["LoginID"]
+
+#address greater than S:
+query = { "address": {"$gt": "S"} }
+
+doc = mycol.find(myquery)
+
+for x in mydoc:
+  print(x)
+
 
 def filter(user_input):
     result = mycol.find({user_input})
@@ -16,4 +24,4 @@ def execute():
     result = filter(user_input)
     return result
 
-filter(user_input)
+execute()

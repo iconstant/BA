@@ -28,7 +28,6 @@
     <h1>Gamez Central</h1>
     
     <div>
-        
         <table id="logins">
             <tr>
                 <td>Login_ID</td>
@@ -65,10 +64,18 @@
         </table>
     </div>
 
-    <form action="query.py" method="post">
+    <form action="query.py" method="dialog">
         <input type="text" name="user_input" placeholder="Enter your text here">
-        <button type="submit">Execute</button>
+        <button onclick="runPythonScript()">Execute</button>
+    <!--type="submit"-->
     </form>
+
+    <script>
+        function runPythonScript(){
+            var pythonScriptPath = "query.py";
+            subprocess.run(["python", pythonScriptPath]);
+        }
+    </script>
 
     <div id="result"></div>
 
