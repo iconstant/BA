@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#tic-tac-toe-container {
+    position: relative;
+}
+
+#tic-tac-toe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
