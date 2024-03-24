@@ -5,16 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe Animation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
-    <div class="#tic-tac-toe-container" onmouseover="anim()">
+    <div class="#tic-tac-toe-container" onmouseover="anim()" style="float: right;">
         <!--tictactoe.svg seperate file that cannot do animations
         <object data="ttt.svg" type="image/svg+xml">
-            <img src="" /> <!--fall back img--
-        </object>-->
+            <img src="" />-->
+        <!--board (styled to fit both SVGs)-->
+        <svg id="tic-tac-toe" width="300" height="300" xmlns="http://www.w3.org/2000/svg" style="padding-top: 150px; padding-left: 150px;">
+            <!-- Vertical lines -->
+            <line x1="100" y1="0" x2="100" y2="300" stroke="black" stroke-width="3" />
+            <line x1="200" y1="0" x2="200" y2="300" stroke="black" stroke-width="3" />
+
+            <!-- Horizontal lines -->
+            <line x1="0" y1="100" x2="300" y2="100" stroke="black" stroke-width="3" />
+            <line x1="0" y1="200" x2="300" y2="200" stroke="black" stroke-width="3" />
+
+        </svg>
+
+        <!-- X's and O's -->
+        <svg id="xs&os" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Example X -->
+            <line id="X0" x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="5" />
+            <line id="X1" x1="90" y1="10" x2="10" y2="90" stroke="red" stroke-width="5" />
+
+            <!-- Example O -->
+            <circle id="O0" cx="250" cy="250" r="40" stroke="blue" stroke-width="5" fill="none" />
+            <circle id="O1" cx="0" cy="0" r="0" stroke="blue" stroke-width="0" fill="none" />
+            Sorry, your browser does not support inline SVG.
+        </svg>
+        
         <svg fill="#00000000" height="300px" width="300px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
 
@@ -55,14 +79,14 @@
            V167.869
            h151.082
            V318.951
-           z" fill="#000000"/>
+           z" fill="#000000" />
                 </g>
             </g>
             <g>
                 <g>
                     <path id="0x0" d="M256,184.656c-32.398,0-58.754,26.356-58.754,58.754s26.356,58.754,58.754,58.754s58.754-26.356,58.754-58.754
                S288.398,184.656,256,184.656z M256,285.377c-23.141,0-41.967-18.827-41.967-41.967s18.826-41.967,41.967-41.967
-               s41.967,18.827,41.967,41.967S279.141,285.377,256,285.377z" transform="translate(-170 180)"/>
+               s41.967,18.827,41.967,41.967S279.141,285.377,256,285.377z" transform="translate(-170 180)" />
                 </g>
             </g>
             <g>
@@ -116,16 +140,18 @@
                s41.967,18.827,41.967,41.967S279.141,285.377,256,285.377z" transform="translate(170 -170)" />
                 </g>
             </g>
-            
-            <path id="win" d="M 50 450 L 460 40 Z" stroke-width="10"/>
+
+            <path id="win" d="M 50 450 L 460 40 Z" stroke-width="10" />
 
         </svg>
+
     </div>
 
-    <input type="button" value="extra" onclick="" />
+    <input type="button" value="Change X" onclick="changeMe()" />
+    <input type="button" value="Add O" onclick="addMe()" />
 
     <!--animations-->
-    <script src="anim.js"></script>
+    <script src="./anim.js"></script>
 
     Vectors and icons by <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>
 </body>
